@@ -1,0 +1,220 @@
+@import "mixins";
+
+.kontener3 {
+  @include display-flex(space-between, 0, 0, 0, wrap);
+  @include dimension(100%, 86%);
+  margin: 0 7% 1% 7%;
+
+  @include responsive(600) {
+    & {
+      justify-content: center;
+    }
+    @include responsive(425) {
+      & {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+.kontener35 {
+  @include display-flex(space-between, 0, 0, column);
+  width: 40%;
+
+  @include responsive(1072) {
+    & {
+      width: 46%;
+    }
+  }
+  @include responsive(600) {
+    & {
+      width: 80%;
+    }
+  }
+  @include responsive(425) {
+    & {
+      width: 100%;
+    }
+  }
+}
+.blok {
+  width: 100%;
+  @include display-flex(0, 0, 0, column);
+
+  &-tytul {
+    font-weight: 400;
+    color: #cc0000;
+    font-size: 1.925rem;
+  }
+  &-tytul2 {
+    margin-top: 4%;
+    font-weight: 700;
+    font-size: 3.6rem;
+  }
+  &-text {
+    margin-top: 6%;
+    font-size: 2.37rem;
+    line-height: 145%;
+  }
+  &-button {
+    @include dimension(2.2vw, 7.6vw);
+    cursor: pointer;
+    margin-top: 8%;
+    background: none;
+    padding: 0.1vw;
+    border-radius: 100px;
+    color: #cc0000;
+    border: 0.15vw solid #cc0000;
+    font-size: 1.7rem;
+    font-weight: 500;
+
+    @include responsive(1920) {
+      & {
+        @include dimension(2.8vw, 8.3vw);
+        font-size: 1.55rem;
+      }
+    }
+  }
+  &-button--2 {
+    font-weight: 550;
+  }
+
+  @include responsive(1638) {
+    &-text {
+      font-size: 1.85rem;
+    }
+    &-tytul {
+      font-size: 1.45rem;
+    }
+    &-tytul2 {
+      font-size: 2.6rem;
+    }
+    &-button {
+      font-size: 1.6rem;
+      height: 3vw;
+      width: 9.3vw;
+    }
+  }
+  @include responsive(1478) {
+    &-button {
+      @include dimension(3.25vw, 10.5vw);
+    }
+  }
+  @include responsive(1366) {
+    &-tytul {
+      font-size: 1.4rem;
+    }
+    &-tytul2 {
+      font-size: 1.8rem;
+    }
+    &-text {
+      font-size: 1.9rem;
+    }
+    &-button {
+      font-size: 1.3rem;
+      width: 9.9vw;
+    }
+  }
+  @include responsive(1200) {
+    &-tytul {
+      font-size: 1.4rem;
+    }
+    &-tytul2 {
+      font-size: 1.8rem;
+    }
+    &-text {
+      font-size: 1.7rem;
+    }
+    &-button {
+      @include dimension(3.5vw, 10.9vw);
+      border: 0.2vw solid #cc0000;
+    }
+  }
+  @include responsive(1072) {
+    &-tytul {
+      font-size: 1.4rem;
+    }
+    &-tytul2 {
+      font-size: 1.8rem;
+    }
+    &-text {
+      font-size: 1.5rem;
+    }
+    &-button {
+      @include dimension(3.5vw, 11.5vw);
+      font-size: 1.2vw;
+    }
+  }
+  @include responsive(768) {
+    &-tytul {
+      font-size: 1.85vw;
+    }
+    &-tytul2 {
+      font-size: 2.2vw;
+    }
+    &-text {
+      font-size: 1.75vw;
+    }
+    &-button {
+      height: 3.75vw;
+      width: 12.85vw;
+      font-size: 1.3vw;
+    }
+  }
+  @include responsive(600) {
+    &-tytul {
+      font-size: 2.35vw;
+    }
+    &-tytul2 {
+      font-size: 3.1vw;
+    }
+    &-text {
+      font-size: 2.85vw;
+    }
+    &-button {
+      height: 5vw;
+      width: 19.5vw;
+      font-size: 2.1vw;
+    }
+  }
+  @include responsive(425) {
+    // &-button {
+    //   @include dimension(2.5vw, 8.35vw);
+    // }
+    &-tytul {
+      font-size: 3.35vw;
+    }
+    &-tytul2 {
+      font-size: 4.5vw;
+    }
+    &-text {
+      font-size: 4.2vw;
+    }
+    &-button {
+      @include dimension(8vw, 31.5vw);
+      font-size: 4vw;
+    }
+  }
+  @include responsive(390) {
+    &-tytul {
+      font-size: 3.75vw;
+    }
+    &-tytul2 {
+      font-size: 4.9vw;
+    }
+    &-text {
+      font-size: 4.7vw;
+    }
+    &-button {
+      width: 33.5vw;
+    }
+  }
+  &__margin--bottom {
+    margin-bottom: 11%;
+    @include responsive(600) {
+      & {
+        margin-bottom: 8%;
+      }
+    }
+  }
+}

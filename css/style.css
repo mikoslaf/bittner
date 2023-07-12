@@ -1,0 +1,1203 @@
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: "Cera-Round-Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+}
+@font-face {
+  font-family: "Cera-Round-Pro";
+  font-weight: 700;
+  src: url("fonts/TYPEMATES\ \ CERA\ ROUND\ PRO\ BOLD.OTF");
+}
+@font-face {
+  font-family: "Cera-Round-Pro";
+  font-weight: 100;
+  src: url("fonts/TYPEMATES\ \ CERAROUNDPROTHIN.OTF");
+}
+@font-face {
+  font-family: "Cera-Round-Pro";
+  font-weight: 900;
+  src: url("fonts/TYPEMATES\ \ CERAROUNDPROBLACK.OTF");
+}
+@font-face {
+  font-family: "Cera-Round-Pro";
+  font-weight: 500;
+  src: url("fonts/TYPEMATES\ \ CERAROUNDPROMEDIUM.OTF");
+}
+@font-face {
+  font-family: "Cera-Round-Pro";
+  font-weight: 400;
+  src: url("fonts/TYPEMATES\ \ CERAROUNDPROREGULAR.OTF");
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+.menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 86%;
+  height: auto;
+  z-index: 15;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 1% 7% 1% 7%;
+  justify-content: space-between;
+}
+.menu-logo {
+  display: flex;
+  align-items: center;
+  width: 8.5vw;
+}
+.menu-lista {
+  text-align: center;
+  font-size: 2.1rem;
+  height: 100%;
+  width: 95rem;
+}
+.menu-przycisk {
+  align-self: flex-start;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: none;
+}
+
+.tabela-menu {
+  width: 100%;
+  height: 100%;
+}
+.tabela-menu-ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  justify-content: space-between;
+}
+.tabela-menu-td {
+  font-weight: 700;
+  cursor: pointer;
+}
+.menu-produkty {
+  position: relative;
+}
+.menu-produkty2 {
+  transition: all 1.5s ease;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: white;
+  z-index: -1;
+  width: 12.5vw;
+  display: none;
+}
+.menu-produkty2.active {
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: white;
+  z-index: -1;
+  width: 12.5vw;
+}
+.menu-mini-lista {
+  display: none;
+  height: 0;
+}
+.menu-mini-lista.active {
+  display: list-item;
+  animation-name: menu;
+  animation-duration: 1.5s;
+  height: auto;
+  overflow: hidden;
+  font-weight: 700;
+  cursor: pointer;
+}
+@keyframes menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1590px) {
+  .menu-produkty2 {
+    width: 14.5vw;
+  }
+}
+@media screen and (max-width: 1332px) {
+  .menu-produkty2 {
+    width: 18vw;
+  }
+  .menu-logo {
+    width: 10vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .tabela-menu-td,
+  .menu-mini-lista.active {
+    margin-bottom: 1.25vw;
+  }
+  .menu-produkty2 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  .tabela-menu-ul {
+    padding: 0;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .menu-lista {
+    visibility: hidden;
+    height: 1em;
+    overflow: hidden;
+    transition: all 1.5s ease;
+    align-items: space-between;
+    margin: 0;
+    font-size: 1em;
+  }
+  .menu-przycisk {
+    display: block;
+    width: 2.5em;
+    margin-top: 0.3vw;
+  }
+  .menu-przycisk.active {
+    background-image: url("./eksport_grafika_XD/x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .menu-przycisk.active img {
+    opacity: 0;
+  }
+  .menu-lista.active {
+    overflow: hidden;
+    visibility: visible;
+    height: 12em;
+    transition: all 1.5s ease;
+    justify-items: space-between;
+    margin: 0;
+    font-size: 1.8em;
+  }
+  .menu-logo {
+    width: 15em;
+    align-self: flex-start;
+  }
+}
+@media screen and (max-width: 620px) {
+  .menu-logo {
+    width: 30em;
+  }
+  .menu-przycisk {
+    width: 4em;
+    margin-top: 1.1vw;
+  }
+}
+@media screen and (max-width: 420px) {
+  .menu-logo {
+    width: 45em;
+  }
+  .menu-przycisk {
+    width: 5.7em;
+    margin-top: 2vw;
+  }
+}
+.menu-produkty-lista {
+  text-align: left;
+  margin: 1vw;
+  font-weight: 700;
+}
+.blok1 {
+  width: 100%;
+}
+.blok1-img {
+  width: 100%;
+  padding-top: 49.94%;
+  display: block;
+  background-size: cover;
+  background-position: center;
+}
+.blok1-kontener {
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  width: 50%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.blok1-tytul {
+  font-weight: 400;
+  color: #e3b814;
+  font-size: 2.4rem;
+}
+.blok1-text {
+  color: white;
+  font-weight: 700;
+  font-size: 4.3rem;
+  width: 100%;
+}
+.blok1-button-srodek {
+  margin: 0.55vw 0.7vw 0.55vw 0.7vw;
+}
+.blok1-button-srodek3 {
+  margin: 0.45vw 0 0.45vw 0;
+}
+@media screen and (max-width: 1647px) {
+  .blok1-tytul {
+    font-size: 2rem;
+  }
+  .blok1-text {
+    font-size: 3.8rem;
+  }
+  .blok1-button-srodek3 {
+    margin: 0.5vw 0 0.5vw 0;
+  }
+}
+@media screen and (max-width: 1404px) {
+  .blok1-tytul {
+    font-size: 2rem;
+  }
+  .blok1-text {
+    font-size: 3.2rem;
+  }
+}
+@media screen and (max-width: 1184px) {
+  .blok1-tytul {
+    font-size: 1.8rem;
+  }
+  .blok1-text {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1104px) {
+  .blok1-tytul {
+    font-size: 1.7rem;
+  }
+  .blok1-text {
+    font-size: 2.3rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  .blok1-tytul {
+    font-size: 1.2rem;
+  }
+  .blok1-text {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 666px) {
+  .blok1-tytul {
+    font-size: 1.15rem;
+  }
+  .blok1-text {
+    font-size: 1.7rem;
+  }
+  .blok1-kontener {
+    top: 25%;
+    height: 50%;
+    width: 42%;
+  }
+}
+@media screen and (max-width: 551px) {
+  .blok1-text {
+    font-size: 1.6rem;
+  }
+  .blok1-kontener {
+    top: 20%;
+    height: 65%;
+  }
+}
+@media screen and (max-width: 393px) {
+  .blok1-tytul {
+    font-size: 1rem;
+  }
+  .blok1-text {
+    font-size: 1.3rem;
+  }
+  .blok1-kontener {
+    top: 10%;
+    height: 80%;
+    width: 38%;
+  }
+}
+#obraz1 {
+  background-color: white;
+}
+.slider {
+  position: relative;
+}
+.slider .owl-dots {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 79%;
+  left: 90%;
+  z-index: 2;
+}
+
+.slider .owl-carousel button.owl-dot {
+  cursor: pointer;
+  margin: 1vw;
+  width: 1vw;
+  height: 1vw;
+  border: 0.15vw solid white;
+  border-radius: 50%;
+  background: none;
+}
+
+.slider .owl-carousel button.owl-dot.active {
+  background-color: white;
+}
+
+.napis {
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  font-size: 2.1vw;
+  margin: 4.5vw 0 4.5vw 0;
+}
+.kontener2 {
+  margin: 0 7% 5vw 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 86%;
+  flex-wrap: wrap;
+}
+.blok2 {
+  cursor: pointer;
+  width: 33%;
+  height: auto;
+}
+.blok2-tlo {
+  width: 100%;
+  padding-top: 69.77%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.blok2-przyciemnienie {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.blok2-obraz {
+  width: 27.5%;
+  height: auto;
+  z-index: 10;
+  margin-bottom: 5%;
+}
+.blok2-napis {
+  width: 100%;
+  height: 30%;
+  background-color: rgb(0, 0, 0, 0.35);
+  z-index: 2;
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.4vw;
+  z-index: 10;
+  text-align: center;
+  font-weight: 500;
+}
+
+.blok2:hover .blok2-przyciemnienie {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.6);
+  z-index: 5;
+  transition: all 0.5s ease;
+}
+.blok2:hover .blok2-napis {
+  background-color: rgb(0, 0, 0, 0) !important;
+}
+.blok2:hover .blok2-obraz {
+  transition: all 0.5s ease;
+  width: 31%;
+}
+@media screen and (max-width: 768px) {
+  .kontener2 {
+    justify-content: center;
+  }
+  .blok2 {
+    width: 48%;
+    margin-top: 1vw;
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .blok2-napis {
+    font-size: 2.25vw;
+  }
+  .napis {
+    font-size: 2.85vw;
+  }
+  .slider .owl-dots {
+    top: 75%;
+  }
+  .slider .owl-carousel button.owl-dot {
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+}
+@media screen and (max-width: 425px) {
+  .kontener2 {
+    justify-content: center;
+  }
+  .blok2 {
+    width: 100%;
+    margin-top: 1vw;
+  }
+  .blok2-napis {
+    font-size: 3.75vw;
+  }
+  .napis {
+    font-size: 4.25vw;
+  }
+  .slider .owl-dots {
+    top: 65%;
+  }
+  .slider .owl-carousel button.owl-dot {
+    width: 2vw;
+    height: 2vw;
+    margin: 1.5vw;
+  }
+}
+.kontener3 {
+  display: flex;
+  width: 86%;
+  height: 100%;
+  margin: 0 7% 1% 7%;
+  justify-content: space-between;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+.kontener35 {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: space-between;
+}
+.blok3 {
+  padding-top: 4%;
+  width: 100%;
+  height: auto;
+  background-image: url("./eksport_grafika_XD/textura.jpg");
+  background-repeat: no-repeat;
+}
+.blok {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.blok-tytul {
+  font-weight: 400;
+  color: #cc0000;
+  font-size: 1.85rem;
+}
+.blok-tytul2 {
+  margin-top: 4%;
+  font-weight: 700;
+  font-size: 3rem;
+}
+.blok-text {
+  margin-top: 6%;
+  font-size: 2.3rem;
+  line-height: 145%;
+}
+.blok-button {
+  height: 2vw;
+  width: 6.35vw;
+  cursor: pointer;
+  margin-top: 9%;
+  background: none;
+  border-radius: 100px;
+  color: #cc0000;
+  border: 0.15vw solid #cc0000;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 1977px) {
+  .blok-button {
+    height: 2.25vw;
+    width: 8vw;
+  }
+}
+@media screen and (max-width: 1461px) {
+  .blok-button {
+    height: 2.25vw;
+    width: 9vw;
+  }
+}
+@media screen and (max-width: 425px) {
+  .blok-button {
+    height: 2.5vw;
+    width: 8.35vw;
+  }
+  .menu-lista.active {
+    height: 12em;
+    font-size: 2em;
+  }
+  .tabela-menu-ul {
+    padding: 0;
+  }
+  .tabela-menu-td,
+  .menu-mini-lista.active {
+    margin-bottom: 3.5vw;
+  }
+}
+.blok3-obraz1 {
+  width: 100%;
+}
+.blok3-obraz2 {
+  background-image: url("./eksport_grafika_XD/blok3-1.png");
+  background-size: cover;
+  background-position: center;
+  padding-top: 100%;
+  width: 100%;
+}
+
+.kontener4 {
+  width: 100%;
+}
+.kontener4-tlo {
+  background-image: url("./eksport_grafika_XD/baner.png");
+  background-size: 100.1% 100.1%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 43.8%;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.blok4 {
+  position: absolute;
+  left: 7%;
+  top: 50%;
+  width: 50%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (max-width: 425px) {
+  .blok4 {
+    top: 37.5%;
+    height: 45%;
+  }
+}
+.blok4-button {
+  cursor: pointer;
+  background: none;
+  border-radius: 100px;
+  color: white;
+  height: 2.5vw;
+  width: 7.5vw;
+  border: 0.15vw solid white;
+  font-size: 0.7vw;
+  font-weight: 500;
+}
+.kontener5 {
+  width: 86%;
+  background-color: #191919;
+  margin-top: -1%;
+  padding: 4% 7% 0% 7%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
+.blok1-button-srodek2 {
+  margin: 0.6vw 0.75vw 0.6vw 0.75vw;
+}
+.blok4-napis {
+  color: white;
+  width: 100%;
+  padding: 5% 0 5% 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  visibility: visible;
+  opacity: 1;
+  transition: all 1.5s ease;
+  height: auto;
+}
+.blok4-napis.active {
+  height: 0px;
+  visibility: hidden;
+  overflow: hidden;
+  padding: 0;
+  opacity: 0;
+}
+.blok4-napis p {
+  width: 75%;
+}
+.blok4-napis-ikonka2 {
+  width: 2vw;
+  cursor: pointer;
+}
+.blok4-napis-ikonka {
+  height: 5%;
+  width: auto;
+}
+.kontener6 {
+  margin-top: -1%;
+  width: 86%;
+  padding: 5% 7% 5% 7%;
+  background-color: #191919;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+video {
+  width: 100%;
+  height: 100%;
+}
+.video {
+  position: relative;
+  width: 40%;
+  align-self: center;
+  z-index: 10;
+}
+.play {
+  width: 12.5%;
+}
+.video:hover .play {
+  visibility: hidden;
+}
+.blok5-logo {
+  width: 10%;
+}
+.blok5-text {
+  font-size: 1.8rem;
+  height: 30%;
+  width: auto;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.blok5-ikonka {
+  display: flex;
+  margin-left: 40%;
+  flex-shrink: 0.1;
+  align-content: center;
+}
+.blok5-ikonka img {
+  height: 2vw;
+  padding-left: 0.5vw;
+}
+#blok5 {
+  width: 40%;
+  color: white;
+}
+@media screen and (max-width: 1920px) {
+  .menu-lista {
+    font-size: 1.6rem;
+  }
+  .blok5-text {
+    font-size: 1.4rem;
+  }
+  .blok5-ikonka {
+    margin-left: 30%;
+  }
+  .blok5-logo {
+    width: 12%;
+  }
+}
+@media screen and (max-width: 1175px) {
+  .blok5-text {
+    font-size: 1.2rem;
+  }
+  .blok5-ikonka {
+    margin-left: 25%;
+  }
+}
+@media screen and (max-width: 875px) {
+  .blok5-text {
+    font-size: 1.2rem;
+  }
+  .blok5-ikonka {
+    margin-left: 10%;
+  }
+  .blok5-ikonka img {
+    height: 3vw;
+  }
+  .blok5-logo {
+    width: 15%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .blok5-ikonka {
+    margin-left: 0;
+  }
+  .blok4-napis p {
+    width: 85%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .blok5-text {
+    font-size: 2.35vw;
+    text-align: center;
+    margin: 2%;
+  }
+  .kontener5 {
+    justify-content: center;
+  }
+  .kontener6 {
+    padding: 8% 7% 8% 7%;
+    flex-direction: column;
+  }
+  .video {
+    margin-top: 1.5vw;
+    width: 80%;
+  }
+  #blok5 {
+    margin-top: 5%;
+    width: 80%;
+  }
+  #blok5-button {
+    margin-top: 5%;
+  }
+  .blok4-napis {
+    padding: 4% 0 4% 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .blok5-logo {
+    align-self: flex-start;
+    width: 22.5%;
+  }
+  .blok5-ikonka {
+    align-self: flex-end;
+  }
+  .blok5-ikonka img {
+    height: 4.5vw;
+  }
+  .blok4-napis p {
+    width: 92%;
+    font-size: 2.2vw;
+  }
+}
+.produkty-kontener {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  height: 4vw;
+  font-size: 1vw;
+  margin-left: 60%;
+  margin-top: 4%;
+}
+.produkty-punkt {
+  z-index: 14;
+  cursor: pointer;
+  padding: 1vw;
+  background-color: white;
+  visibility: hidden;
+  font-weight: 700;
+}
+
+#dofinansowanie-text {
+  font-size: 1.47rem;
+}
+.blok6 {
+  transition: all 1.5s ease;
+  opacity: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 0px;
+  visibility: hidden;
+}
+.blok6.active {
+  height: auto;
+  margin-top: 7.5%;
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  visibility: visible;
+  transition: all 1.5s ease;
+  opacity: 1;
+}
+.blok6-obraz1 {
+  visibility: hidden;
+  transition: all 1.5s ease;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+}
+.blok6-obraz1.active {
+  transition: all 1.5s ease;
+  opacity: 1;
+  visibility: visible;
+  width: 40%;
+  margin-top: 7.5%;
+}
+.blok6-obraz2 {
+  background-image: url("./eksport_grafika_XD/dofinansowanie.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 56.64%;
+  position: relative;
+}
+.blok6-napis {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 78%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.blok6-napis2 {
+  font-size: 2.85rem;
+  line-height: 145%;
+  width: 60%;
+}
+.blok6-napis3 {
+  margin-top: 3%;
+  font-weight: 700;
+  font-size: 2.9rem;
+}
+.linia {
+  order: 15;
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+  margin-top: 2%;
+}
+@media screen and (max-width: 1920px) {
+  .blok6-napis2 {
+    font-size: 1.85rem;
+  }
+  .blok6-napis3 {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 1615px) {
+  .blok-text {
+    font-size: 1.85rem;
+  }
+  .blok-tytul {
+    font-size: 1.45rem;
+  }
+  .blok-tytul2 {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .blok-tytul {
+    font-size: 1.4rem;
+  }
+  .blok-tytul2 {
+    font-size: 1.8rem;
+  }
+  .blok-text {
+    font-size: 1.9rem;
+  }
+  .blok-button {
+    font-size: 1.3rem;
+    width: 9.9vw;
+  }
+  .blok1-button-srodek {
+    margin: 0.4vw;
+  }
+  .blok6-napis2 {
+    top: -10%;
+    width: 70%;
+    font-size: 1.65rem;
+  }
+  .blok6-napis3 {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .blok-tytul {
+    font-size: 1.4rem;
+  }
+  .blok-tytul2 {
+    font-size: 1.8rem;
+  }
+  .blok-text {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 1072px) {
+  .blok-tytul {
+    font-size: 1.4rem;
+  }
+  .blok-tytul2 {
+    font-size: 1.8rem;
+  }
+  .wieksza-grubosc {
+    font-size: 2.3rem;
+  }
+  .blok-text {
+    font-size: 1.5rem;
+  }
+  .blok1-button-srodek {
+    margin: 0;
+  }
+  .kontener35 {
+    width: 46%;
+  }
+  .blok-button {
+    height: 3.5vw;
+    width: 11.5vw;
+    font-size: 1.5vw;
+  }
+  .blok6-napis2 {
+    width: 75%;
+    font-size: 1.35rem;
+  }
+  .blok6-napis3 {
+    font-size: 2rem;
+  }
+  .blok4-napis-ikonka2 {
+    width: 3vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blok-tytul {
+    font-size: 1.85vw;
+  }
+  .blok-tytul2 {
+    font-size: 2.2vw;
+  }
+  .wieksza-grubosc {
+    font-size: 3.2vw;
+  }
+  .blok-text {
+    font-size: 1.75vw;
+  }
+  .blok-button {
+    height: 3.5vw;
+    width: 11.85vw;
+    font-size: 1.5vw;
+  }
+  .blok6-obraz1.active {
+    width: 80%;
+    margin-top: 7.5%;
+  }
+  .kontener5 {
+    justify-content: space-around;
+  }
+
+  .blok6-napis2 {
+    width: 80%;
+    font-size: 2rem;
+  }
+  .blok6-napis3 {
+    font-size: 2.5rem;
+  }
+  .blok6.active {
+    order: 4;
+    width: 80%;
+  }
+  #lista,
+  #lista2 {
+    width: 4vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .kontener3 {
+    justify-content: center;
+  }
+  .kontener35 {
+    width: 80%;
+  }
+  #blok3-obraz-2 {
+    order: 1;
+    margin-top: 8%;
+  }
+  .blok-tytul {
+    font-size: 2.35vw;
+  }
+  .blok-tytul2 {
+    font-size: 3.1vw;
+  }
+  .wieksza-grubosc {
+    font-size: 3.8vw;
+  }
+  .blok-text {
+    font-size: 2.85vw;
+  }
+  .blok-button {
+    height: 4.5vw;
+    width: 18.5vw;
+    font-size: 2.2vw;
+  }
+  .blok4-napis-ikonka2 {
+    width: 4vw;
+  }
+  .blok6-napis2 {
+    line-height: 120%;
+    font-size: 1.5rem;
+  }
+  .blok6-napis3 {
+    font-size: 1.75rem;
+  }
+  .wieksza-grubosc2 {
+    font-size: 2.4vw;
+    margin-bottom: 2vw;
+  }
+  #lista,
+  #lista2 {
+    width: 4.5vw;
+  }
+  #lista2 {
+    order: -1;
+    align-self: flex-end;
+  }
+  .blok6.active {
+    margin-bottom: 8%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .blok6.active,
+  .blok6-obraz1.active,
+  .kontener35,
+  .video,
+  #blok5 {
+    width: 100%;
+  }
+  .blok4-napis p {
+    font-size: 2.9vw;
+  }
+  .blok-tytul {
+    font-size: 2.35vw;
+  }
+  .blok-tytul2 {
+    font-size: 3.5vw;
+  }
+  .wieksza-grubosc {
+    font-size: 4vw;
+  }
+  .blok-text {
+    font-size: 3.2vw;
+  }
+  .blok-button {
+    height: 4.75vw;
+    width: 22.5vw;
+    font-size: 2.8vw;
+  }
+  .blok5-text {
+    font-size: 2.8vw;
+  }
+  .blok5-logo {
+    width: 25%;
+  }
+  .blok5-ikonka img {
+    height: 6vw;
+    padding-left: 1.5vw;
+  }
+  .blok4-napis-ikonka2 {
+    width: 6vw;
+  }
+  .wieksza-grubosc2 {
+    font-size: 2.8vw;
+  }
+  #lista,
+  #lista2 {
+    width: 6vw;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .blok-tytul {
+    font-size: 2.75vw;
+  }
+  .blok-tytul2 {
+    font-size: 3.9vw;
+  }
+  .wieksza-grubosc {
+    font-size: 4.5vw;
+  }
+  .blok-text {
+    font-size: 3.7vw;
+  }
+  .blok-button {
+    height: 5.75vw;
+    width: 23.5vw;
+    font-size: 3vw;
+  }
+  .blok5-text {
+    font-size: 3.2vw;
+  }
+  .blok5-logo {
+    width: 27.5%;
+  }
+  .blok6-napis2 {
+    font-size: 1.2rem;
+  }
+  .blok6-napis3 {
+    margin-top: 1.5%;
+    font-size: 1.45rem;
+  }
+  .wieksza-grubosc2 {
+    font-size: 3.35vw;
+  }
+}
+#onas__kontener--obraz {
+  width: auto;
+  top: 24.5%;
+  height: 17%;
+  justify-content: space-around;
+}
+.onas__kontener3--margin {
+  margin-top: 12%;
+}
+#onas__kontener--3 {
+  height: auto;
+  margin: 0;
+  padding: 4% 7% 4% 7%;
+  background-color: rgb(0, 0, 0, 0.05);
+}
+#onas__kontener--3-1 {
+  height: auto;
+  margin: 0;
+  padding: 4% 7% 4% 7%;
+}
+@media screen and (max-width: 600px) {
+  #onas__kontener3--blok {
+    order: 3;
+    margin-top: 8%;
+  }
+}

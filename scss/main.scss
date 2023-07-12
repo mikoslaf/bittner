@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "Cera-Round-Pro";
+  font-weight: 700;
+  src: url("./../fonts/TYPEMATES\ \ CERA\ ROUND\ PRO\ BOLD.OTF");
+}
+@font-face {
+  font-family: "Cera-Round-Pro";
+  font-weight: 100;
+  src: url("./../fonts/TYPEMATES\ \ CERAROUNDPROTHIN.OTF");
+}
+@font-face {
+  font-family: "Cera-Round-Pro";
+  font-weight: 900;
+  src: url("./../fonts/TYPEMATES\ \ CERAROUNDPROBLACK.OTF");
+}
+@font-face {
+  font-family: "Cera-Round-Pro";
+  font-weight: 500;
+  src: url("./../fonts/TYPEMATES\ \ CERAROUNDPROMEDIUM.OTF");
+}
+@font-face {
+  font-family: "Cera-Round-Pro";
+  font-weight: 400;
+  src: url("./../fonts/TYPEMATES\ \ CERAROUNDPROREGULAR.OTF");
+}
+
+@import "menu";
+@import "slider";
+@import "blok2";
+@import "blok";
+@import "blok3-4-5";
+@import "onas";
+@import "produkty";
+@import "materialy";
+@import "tech-kontakt";
+@import "mobile";

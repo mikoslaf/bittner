@@ -1,0 +1,70 @@
+@mixin dimension($height: 100%, $width: 100%) {
+  height: $height;
+  width: $width;
+}
+
+@mixin absolut($top: 0%, $left: 0%, $absolut: absolute) {
+  position: $absolut;
+  top: $top;
+  left: $left;
+}
+
+@mixin display-flex($justify: 0, $align: 0, $items: 0, $direction: 0, $wrap: 0) {
+  display: flex;
+  @if $justify != 0 {
+    justify-content: $justify;
+  }
+  @if $align != 0 {
+    align-content: $align;
+  }
+  @if $items != 0 {
+    align-items: $items;
+  }
+  @if $direction != 0 {
+    flex-direction: $direction;
+  }
+  @if $wrap != 0 {
+    flex-wrap: $wrap;
+  }
+}
+
+@mixin responsive($px) {
+  @media screen and (max-width: $px+"px") {
+    @content;
+  }
+}
+
+@mixin background($url: 0, $position: center, $repeat: no-repeat, $cover: cover) {
+  @if $url != 0 {
+    background-image: url($url);
+  }
+  background-position: $position;
+  background-repeat: $repeat;
+  background-size: $cover;
+}
+
+@mixin animaction($visibility: hidden, $time: 1.5s, $overflow: 0, $margin: none) {
+  visibility: $visibility;
+  transition: all $time ease;
+  @if $overflow != 0 {
+    overflow: $overflow;
+  }
+  @if $margin != none {
+    margin: $margin;
+  }
+}
+@mixin obraz($url1: "./../eksport_grafika_XD/mat2.png", $url2: "./../eksport_grafika_XD/mat2-5.png") {
+  background-image: url($url1);
+  @include responsive(425) {
+    & {
+      background-image: url($url2);
+    }
+  }
+} //74.37% | 61.27%
+@mixin kwadrat($pad1: 100%, $pad2: 74.37%) {
+  padding-bottom: $pad1;
+
+  @include responsive(425) {
+    padding-bottom: $pad2;
+  }
+}

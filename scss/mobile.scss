@@ -1,0 +1,419 @@
+@import "mixins";
+
+.padding {
+  @include responsive(425) {
+    &--0 {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+.margin__top {
+  &3 {
+    margin-top: 12%;
+  }
+  @include responsive(600) {
+    & {
+      margin-top: 4%;
+    }
+    &5 {
+      margin-top: 4%;
+    }
+    &2 {
+      margin-top: 6%;
+    }
+    &3 {
+      margin-top: 6%; //gora
+    }
+  }
+  @include responsive(425) {
+    & {
+      margin-top: 0; //gora
+    }
+    &4 {
+      margin-top: 7%;
+    }
+
+    &3 {
+      margin-top: 0; //gora
+    }
+  }
+}
+.margin__left {
+  @include responsive(425) {
+    margin-left: 7%;
+    margin-right: 7%;
+    width: 86%;
+  }
+}
+.order {
+  &--1 {
+    order: -1;
+    @include responsive(600) {
+      order: 2;
+    }
+  }
+}
+.margin__bottom {
+  margin-bottom: 18%;
+  &--2,
+  &--25 {
+    margin-bottom: 8%;
+  }
+  &--3 {
+    margin-top: 2.5%;
+    @include responsive(1024) {
+      & {
+        margin-top: 0;
+      }
+    }
+  }
+  @include responsive(600) {
+    & {
+      margin-bottom: 0; //góra
+    }
+    &--2 {
+      margin-bottom: 4%; //góra
+    }
+    &--25 {
+      margin-bottom: 3.5%; //góra
+    }
+    &--4 {
+      margin-bottom: 6%;
+    }
+    &--5 {
+      margin-bottom: 7%;
+    }
+    &--6 {
+      margin-bottom: 4%;
+    }
+  }
+  @include responsive(425) {
+    &--7 {
+      margin: 6% auto 6%; //4 auto 4
+    }
+    &--0 {
+      margin: 0 auto 0;
+    }
+  }
+}
+
+.mobile {
+  &__blok1 {
+    & .blok-button {
+      margin-top: 0;
+    }
+    @include responsive(425) {
+      & {
+        justify-content: flex-start;
+        top: 6%;
+        width: 86%;
+        height: 87.5%;
+      }
+      & .blok1-tytul,
+      .blok-tytul {
+        font-size: 1.9rem;
+      }
+      & .blok1-text,
+      .blok-text,
+      .blok-tytul2 {
+        font-size: 4rem;
+      }
+      & .blok-button {
+        height: 8.75vw;
+        width: 35.5vw;
+        font-size: 3.6vw;
+        margin-top: auto;
+      }
+    }
+    @include responsive(380) {
+      & .blok1-tytul,
+      .blok-tytul {
+        font-size: 1.7rem;
+      }
+      & .blok1-text,
+      .blok-text,
+      .blok-tytul2 {
+        font-size: 3.5rem;
+      }
+    }
+    @include responsive(348) {
+      & .blok1-tytul,
+      .blok-tytul {
+        font-size: 1.6rem;
+      }
+      & .blok1-text,
+      .blok-text,
+      .blok-tytul2 {
+        font-size: 3.25rem;
+      }
+    }
+    @include responsive(348) {
+      & .blok1-tytul,
+      .blok-tytul {
+        font-size: 1.5rem;
+      }
+      & .blok1-text,
+      .blok-text,
+      .blok-tytul2 {
+        font-size: 3rem;
+      }
+      & .blok-button {
+        height: 9.75vw;
+        width: 37.5vw;
+        font-size: 4vw;
+      }
+    }
+  }
+  &__pro {
+    @include responsive(425) {
+      top: 10%;
+      height: 81.5%;
+      &--text {
+        margin: 10.8% 0 10.25% 0;
+      }
+    }
+  }
+  &__blok2 {
+    justify-content: center;
+    @include responsive(425) {
+      height: 50%;
+      top: 35%;
+    }
+    &--margin {
+      margin: 2% 0 0 0;
+      @include responsive(425) {
+        margin: 4.8% 0 6.25% 0;
+      }
+    }
+  }
+
+  &__obraz {
+    display: none;
+    @include responsive(425) {
+      & {
+        display: block;
+        width: 100%;
+      }
+      &--2 {
+        display: none;
+      }
+    }
+  }
+  &__kontener {
+    @include responsive(425) {
+      & {
+        flex-direction: column-reverse;
+      }
+    }
+    &--2 {
+      @include responsive(425) {
+        & {
+          flex-direction: column;
+        }
+      }
+    }
+    &--onas {
+      margin: 0;
+      height: auto;
+      padding: 4% 7% 4% 7%;
+      @include responsive(425) {
+        & {
+          padding: 0;
+        }
+      }
+    }
+  }
+  &__tytul {
+    @include responsive(425) {
+      & {
+        font-size: 1.8rem;
+      }
+    }
+    @include responsive(390) {
+      & {
+        font-size: 1.65rem;
+      }
+    }
+    @include responsive(330) {
+      & {
+        font-size: 1.45rem;
+      }
+    }
+  }
+  &__text {
+    @include responsive(425) {
+      & {
+        font-size: 3.8rem;
+      }
+    }
+    @include responsive(390) {
+      & {
+        font-size: 3.2rem;
+      }
+    }
+    @include responsive(330) {
+      & {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
+  &__baner--margin {
+    @include responsive(425) {
+      z-index: 10;
+      margin-top: -15%;
+    }
+  }
+}
+
+.obrazek {
+  &0 {
+    @include kwadrat;
+  }
+  &1 {
+    @include obraz("./../eksport_grafika_XD/mat2.png", "./../eksport_grafika_XD/mat1-5.png");
+    @include kwadrat;
+  }
+  &2 {
+    @include obraz("./../eksport_grafika_XD/mat1.png", "./../eksport_grafika_XD/mat2-5.png");
+    @include kwadrat;
+  }
+  &3 {
+    @include obraz("./../eksport_grafika_XD/blok3-2.png", "./../eksport_grafika_XD/blok3-2-5.png");
+    @include kwadrat;
+  }
+  &4 {
+    @include obraz("./../eksport_grafika_XD/pro75.png", "./../eksport_grafika_XD/pro75-5.png");
+    @include kwadrat(31.82%, 170.3%);
+  }
+  &5 {
+    background-image: url("./../eksport_grafika_XD/blok3-1.png");
+    @include responsive(425) {
+      display: none;
+    }
+  }
+  &6 {
+    @include obraz("./../eksport_grafika_XD/onas.png", "./../eksport_grafika_XD/onas-5.png");
+    @include kwadrat(31.82%, 170.3%);
+  }
+  &7 {
+    @include obraz("./../eksport_grafika_XD/onas2.png", "./../eksport_grafika_XD/onas2-5.png");
+    @include kwadrat;
+  }
+  &8 {
+    @include obraz("./../eksport_grafika_XD/onas3.png", "./../eksport_grafika_XD/onas3-5.png");
+    @include kwadrat;
+  }
+  &9 {
+    @include obraz("./../eksport_grafika_XD/onas4.png", "./../eksport_grafika_XD/onas4-5.png");
+    @include kwadrat;
+  }
+  &10 {
+    @include obraz("./../eksport_grafika_XD/onas6.png", "./../eksport_grafika_XD/onas6-5.png");
+    @include kwadrat;
+  }
+  &11 {
+    @include obraz("./../eksport_grafika_XD/onas7.png", "./../eksport_grafika_XD/onas7-5.png");
+    @include kwadrat;
+  }
+  &12 {
+    @include obraz("./../eksport_grafika_XD/onas8.png", "./../eksport_grafika_XD/onas8-5.png");
+    @include kwadrat;
+  }
+  &13 {
+    @include obraz("./../eksport_grafika_XD/onas9.png", "./../eksport_grafika_XD/onas9-5.png");
+    @include kwadrat;
+  }
+  &14 {
+    @include obraz("./../eksport_grafika_XD/pro5.png", "./../eksport_grafika_XD/pro5-5.png");
+    @include kwadrat;
+  }
+  &15 {
+    @include obraz("./../eksport_grafika_XD/pro16.png", "./../eksport_grafika_XD/pro16-5.png");
+    @include kwadrat;
+  }
+  &16 {
+    @include obraz("./../eksport_grafika_XD/pro15.png", "./../eksport_grafika_XD/pro15-5.png");
+    @include kwadrat;
+  }
+  &17 {
+    @include obraz("./../eksport_grafika_XD/pro28.png", "./../eksport_grafika_XD/pro28-5.png");
+    @include kwadrat;
+  }
+  &18 {
+    @include obraz("./../eksport_grafika_XD/pro29.png", "./../eksport_grafika_XD/pro29-5.png");
+    @include kwadrat;
+  }
+  &19 {
+    @include obraz("./../eksport_grafika_XD/pro43.png", "./../eksport_grafika_XD/pro43-5.png");
+    @include kwadrat;
+  }
+  &20 {
+    @include obraz("./../eksport_grafika_XD/pro46.png", "./../eksport_grafika_XD/pro46-5.png");
+    @include kwadrat;
+  }
+  &21 {
+    @include obraz("./../eksport_grafika_XD/tech02.png", "./../eksport_grafika_XD/tech02-5.png");
+    @include kwadrat;
+  }
+  &22 {
+    @include obraz("./../eksport_grafika_XD/tech03.png", "./../eksport_grafika_XD/tech03-5.png");
+    @include kwadrat;
+  }
+  &23 {
+    @include obraz("./../eksport_grafika_XD/tech07.png", "./../eksport_grafika_XD/tech07-5.png");
+    @include kwadrat;
+  }
+  &24 {
+    @include obraz("./../eksport_grafika_XD/slider1.png", "./../eksport_grafika_XD/slider1-5.png");
+    @include kwadrat(49.94%, 170.3%);
+  }
+  &25 {
+    @include obraz("./../eksport_grafika_XD/slider2.png", "./../eksport_grafika_XD/slider2-5.png");
+    @include kwadrat(49.94%, 170.3%);
+  }
+  &26 {
+    @include obraz("./../eksport_grafika_XD/slider3.png", "./../eksport_grafika_XD/slider3-5.png");
+    @include kwadrat(49.94%, 170.3%);
+  }
+  &27 {
+    @include obraz("./../eksport_grafika_XD/produkty.png", "./../eksport_grafika_XD/produkty-5.png");
+    @include kwadrat(31.82%, 170.3%);
+  }
+  &28 {
+    @include obraz("./../eksport_grafika_XD/produkty0.png", "./../eksport_grafika_XD/produkty0-5.png");
+    @include kwadrat(31.82%, 170.3%);
+  }
+  &29 {
+    @include obraz("./../eksport_grafika_XD/produkty01.png", "./../eksport_grafika_XD/produkty1-5.png");
+    @include kwadrat(31.82%, 170.3%);
+  }
+  &30 {
+    @include obraz("./../eksport_grafika_XD/mat01.png", "./../eksport_grafika_XD/mat01-5.png");
+    @include kwadrat(31.82%, 170.3%);
+  }
+  &31 {
+    @include obraz("./../eksport_grafika_XD/tech05.png", "./../eksport_grafika_XD/tech05-5.png");
+    @include kwadrat(31.82%, 170.3%);
+  }
+  &32 {
+    @include obraz("./../eksport_grafika_XD/pro70.png", "./../eksport_grafika_XD/pro70-5.png");
+    @include kwadrat();
+  }
+  &33 {
+    @include obraz("./../eksport_grafika_XD/pro70.png", "./../eksport_grafika_XD/pro70-55.png");
+    @include kwadrat();
+  }
+  &34 {
+    @include obraz("./../eksport_grafika_XD/baner.png", "./../eksport_grafika_XD/baner-5.png");
+    @include kwadrat(43.8%, 116.8%);
+  }
+  &35 {
+    @include obraz("./../eksport_grafika_XD/baner2.png", "./../eksport_grafika_XD/baner-5.png");
+    @include kwadrat(43.8%, 116.8%);
+  }
+  &36 {
+    @include kwadrat(61.27%, 74.37%);
+  }
+}

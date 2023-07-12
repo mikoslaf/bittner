@@ -1,0 +1,288 @@
+@import "mixins";
+
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font: {
+    family: "Cera-Round-Pro", sans-serif;
+    weight: 400;
+  }
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  @include dimension;
+}
+img {
+  @include dimension;
+}
+.menu {
+  @include absolut(0%, 0%, fixed);
+  width: 86%;
+  z-index: 15;
+  padding: 1.5% 7% 1.5% 7%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  background-color: white;
+  @include display-flex(space-between, center);
+
+  @include responsive(425) {
+    & {
+      padding: 4% 7% 4% 7%;
+      overflow: hidden;
+    }
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  &-logo {
+    @include display-flex(0, 0, center);
+    width: 8, 5vw;
+    opacity: 1;
+    transition: all 1.25s ease;
+
+    & a {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &-logo.active {
+    transition: all 1.25s ease;
+    opacity: 0;
+  }
+  &-lista {
+    text-align: center;
+    font-size: 2.1rem;
+    @include dimension(100%, 95rem);
+  }
+  &-przycisk {
+    align-self: flex-start;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: none;
+  }
+  &-produkty {
+    position: relative;
+  }
+  &-produkty2 {
+    @include animaction;
+    @include display-flex(space-around, space-around, 0, column);
+    @include absolut;
+    z-index: -1;
+    width: 12.5vw;
+    display: none;
+  }
+  &-produkty2.active {
+    visibility: visible;
+    @include display-flex(space-around, space-around, 0, column);
+    @include absolut;
+    background-color: white;
+    z-index: -1;
+    width: 12.5vw;
+  }
+  &-mini-lista {
+    display: none;
+    height: 0;
+  }
+  &-mini-lista.active {
+    display: list-item;
+    animation-name: menu;
+    animation-duration: 1.5s;
+    height: auto;
+    overflow: hidden;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  &-produkty-lista {
+    text-align: left;
+    margin: 1vw;
+    font-weight: 700;
+  }
+}
+
+@keyframes menu {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tabela {
+  &-menu {
+    @include dimension;
+  }
+  &-menu-ul {
+    @include display-flex(space-between, 0, center);
+    list-style-type: none;
+
+    @include responsive(1024) {
+      & {
+        margin: 7% 0 0 0;
+      }
+    }
+    @include responsive(600) {
+      & {
+        margin: 15% 0 0 0;
+      }
+    }
+  }
+  &-menu-td {
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+@include responsive(1920) {
+  .menu-lista {
+    font-size: 1.9rem;
+  }
+}
+@include responsive(1590) {
+  .menu-produkty2 {
+    width: 14.5vw;
+  }
+}
+
+@include responsive(1332) {
+  .menu {
+    &-produkty2 {
+      width: 18vw;
+    }
+    &-logo {
+      width: 10vw;
+    }
+  }
+}
+
+@include responsive(1024) {
+  .menu {
+    &-mini-lista.active {
+      margin-bottom: 1.25vw;
+    }
+    &-produkty2 {
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+    &-przycisk {
+      display: block;
+      width: 3.25em;
+      & img {
+        height: 80%;
+        width: 80%;
+        margin-top: 10%;
+      }
+    }
+    &-przycisk.active {
+      @include background("./../eksport_grafika_XD/x.svg");
+    }
+    &-przycisk.active img {
+      opacity: 0;
+    }
+    &-lista {
+      //@include animaction(hidden, 1.5s, hidden, 0);
+      visibility: hidden;
+      overflow: hidden;
+      height: 1em;
+      align-items: space-between;
+      font-size: 1.8em;
+    }
+    &-lista.active {
+      //@include animaction(visible, 1.5s, hidden, 0);
+      visibility: visible;
+      overflow: hidden;
+      justify-items: space-between;
+      font-size: 1.8em;
+    }
+    &-logo {
+      width: 15em;
+      align-self: flex-start;
+    }
+  }
+  .tabela {
+    &-menu-td {
+      margin-bottom: 1.25vw;
+    }
+    &-menu-ul {
+      padding: 0;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+}
+
+@include responsive(620) {
+  .menu {
+    &-logo {
+      width: 30em;
+    }
+    &-przycisk {
+      width: 4em;
+      margin-top: 1.1vw;
+
+      & img {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
+@include responsive(425) {
+  .tabela-menu-ul {
+    padding: 0;
+    width: 125%;
+    margin-left: -13%;
+  }
+  .tabela-menu-td,
+  .menu-mini-lista.active {
+    margin-bottom: 3.5vw;
+  }
+  .menu-lista.active {
+    overflow: visible;
+    font-size: 3em;
+  }
+  .tabela-menu {
+    overflow: visible;
+  }
+}
+@include responsive(425) {
+  .menu {
+    &-logo {
+      width: 12.5em;
+    }
+    &-przycisk {
+      width: 7em;
+    }
+  }
+}
+#menu__border {
+  position: relative;
+}
+.menu__border {
+  @include absolut(60%, 0%);
+  height: 3px;
+  width: 100%;
+  @include responsive(1024) {
+    top: 40%;
+  }
+
+  & img {
+    height: auto;
+  }
+}
+.link {
+  color: white;
+  text-decoration: none;
+
+  &2 {
+    color: red;
+    text-decoration: none;
+  }
+}

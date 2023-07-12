@@ -1,0 +1,198 @@
+@import "mixins";
+
+.onas {
+  &__kontener--obraz {
+    width: auto;
+    top: 39.5%;
+    height: 32%;
+    justify-content: space-around;
+
+    @include responsive(425) {
+      & {
+        top: 21%;
+        height: 30%;
+      }
+    }
+    @include responsive(425) {
+      & {
+        top: 21%;
+        height: 30%;
+      }
+    }
+  }
+  &__kontener3--margin {
+    margin-top: 12%;
+  }
+  &__srodowisko {
+    @include absolut(68%, 60%);
+    width: 24.47%;
+    @include responsive(600) {
+      display: none;
+    }
+    &--tlo {
+      position: relative;
+      background-image: url("./../eksport_grafika_XD/baner2.png");
+      @include responsive(600) {
+        & {
+          background-image: url("./../eksport_grafika_XD/baner.png");
+        }
+      }
+    }
+  }
+
+  &__srodowisko--obraz {
+    width: 100%;
+    padding-bottom: 100%;
+    @include background("./../eksport_grafika_XD/roslina.svg");
+  }
+  @include responsive(600) {
+    &--kontener35 {
+      flex-direction: column-reverse;
+    }
+  }
+  &__blok {
+    width: 60%;
+    color: black;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.04);
+    @include display-flex(center, space-around, center);
+    align-self: stretch;
+    &--padding2 {
+      background-color: #191919;
+      margin-top: -2px;
+      color: white;
+      padding: 5% 7% 0 7%;
+      height: auto;
+      margin: 0;
+      @include responsive(425) {
+        & {
+          padding: 7% 0 7% 0;
+        }
+      }
+    }
+  }
+  @include responsive(600) {
+    &__blok {
+      width: 80%;
+      padding: 3.5vw 0 8vw;
+    }
+  }
+  @include responsive(425) {
+    &__blok {
+      width: 100%;
+    }
+  }
+  &__blok--obraz {
+    width: 100%;
+    padding-bottom: 61.27%;
+    @include background("./../eksport_grafika_XD/onas10.png");
+  }
+  &__blok--margin {
+    @include responsive(600) {
+      & {
+        margin-top: 6%;
+      }
+    }
+  }
+  &__blok--margin2 {
+    margin-bottom: 16%;
+  }
+
+  @include responsive(600) {
+    &__blok--margin2 {
+      margin-bottom: 6%;
+    }
+    &__blok--padding {
+      padding: 2% 0 6%;
+    }
+    &__blok--order {
+      order: -1;
+    }
+    &__blok--order2 {
+      order: 4;
+    }
+  }
+}
+#onas {
+  &__kontener--obraz {
+    width: auto;
+    top: 39.5%;
+    height: 32%;
+    justify-content: space-around;
+  }
+  &__kontener--3 {
+    height: auto;
+    margin: 0;
+    padding: 6% 7% 4% 7%;
+    background-color: rgb(0, 0, 0, 0.05);
+    @include responsive(425) {
+      & {
+        padding: 0;
+      }
+    }
+  }
+  &__kontener--3-0 {
+    height: auto;
+    margin: 0;
+    padding: 4% 7% 4% 7%;
+    @include responsive(600) {
+      padding: 4% 7% 0 7%;
+    }
+    @include responsive(425) {
+      padding: 0;
+    }
+  }
+  &__kontener--3-1 {
+    height: auto;
+    margin: 0;
+    padding: 4% 7% 4% 7%;
+    @include responsive(425) {
+      padding: 6% 0 6% 0;
+    }
+  }
+  &__kontener--3 li {
+    color: red;
+    margin-top: 1vw;
+  }
+  &__kontener--3 span {
+    color: black;
+  }
+  @include responsive(600) {
+    &__kontener3--blok {
+      margin-top: 6%;
+    }
+    &__kontener--obraz {
+      top: 33%;
+      height: 37%;
+    }
+    &__obraz--margin {
+      margin-bottom: 6%;
+    }
+    &__obraz--margin-2 {
+      margin-bottom: 8%;
+    }
+    &__obraz--order {
+      order: -1;
+    }
+  }
+  @include responsive(425) {
+    &__kontener--obraz {
+      top: 21%;
+      height: 30%;
+    }
+  }
+}
+.stopka {
+  background-color: #191919;
+  padding: 1% 7% 2px 7%;
+  @include dimension(3vw, 86%);
+  &--kreska {
+    @include dimension();
+    border-bottom: 1px solid white;
+  }
+  @include responsive(600) {
+    & {
+      padding: 4% 7% 2px 7%;
+    }
+  }
+}

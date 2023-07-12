@@ -1,0 +1,552 @@
+@import "mixins";
+
+.blok3 {
+  padding-top: 4%;
+  @include dimension(auto);
+  background-image: url("./../eksport_grafika_XD/textura.jpg");
+  background-repeat: no-repeat;
+
+  @include responsive(425) {
+    & {
+      padding: 0;
+    }
+  }
+
+  &-obraz1 {
+    width: 100%;
+  }
+  &-obraz2 {
+    @include background();
+    padding-bottom: 100%;
+    width: 100%;
+  }
+  &__obraz--2 {
+    margin-bottom: 16%;
+    @include responsive(600) {
+      & {
+        margin-bottom: 12%;
+      }
+    }
+    @include responsive(425) {
+      & {
+        margin-bottom: 11%;
+      }
+    }
+  }
+}
+
+.kontener4 {
+  width: 100%;
+}
+.kontener4-tlo {
+  @include background("./../eksport_grafika_XD/baner.png", center, no-repeat, 100.1% 100.1%);
+  padding-bottom: 43.8%;
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.blok4 {
+  @include absolut(50%, 7%);
+  @include dimension(35%, 50%);
+  @include display-flex(space-between, 0, 0, column);
+
+  &2 {
+    height: 15%;
+    @include responsive(1024) {
+      & {
+        height: 20%;
+      }
+    }
+  }
+
+  @include responsive(768) {
+    & {
+      top: 20%;
+      height: 80%;
+      justify-content: center;
+    }
+  }
+  @include responsive(600) {
+    & {
+      top: 30%;
+      height: 70%;
+      justify-content: center;
+    }
+  }
+  &-button {
+    cursor: pointer;
+    background: none;
+    border-radius: 100px;
+    color: white;
+    @include dimension(2.5vw, 7.5vw);
+    border: 0.15vw solid white;
+    font-size: 0.7vw;
+    font-weight: 500;
+  }
+  &-napis {
+    color: white;
+    padding: 4% 0 4% 0;
+    @include display-flex(space-between, center);
+    @include animaction(visible);
+    @include dimension(auto);
+    opacity: 1;
+    & p {
+      line-height: 145%;
+    }
+  }
+  &-napis.active {
+    height: 0px;
+    @include animaction(hidden, 1.5s, hidden);
+    padding: 0;
+    opacity: 0;
+  }
+  &-napis p {
+    width: 75%;
+  }
+  &-napis-ikonka2-kontener {
+    width: 100%;
+    @include absolut;
+    @include display-flex(flex-end);
+  }
+  &-napis-ikonka2 {
+    width: 2vw;
+    cursor: pointer;
+    & img {
+      height: auto;
+      margin-top: 25%;
+    }
+  }
+  &-napis-ikonka {
+    @include dimension(5%, auto);
+  }
+  @include responsive(1072) {
+    &-napis-ikonka2 {
+      width: 3vw;
+    }
+  }
+  @include responsive(700) {
+    &-napis p {
+      width: 85%;
+    }
+  }
+  @include responsive(600) {
+    &-napis-ikonka2 {
+      width: 4vw;
+    }
+  }
+  @include responsive(425) {
+    &-napis p {
+      font-size: 3.6vw;
+      width: 90%;
+    }
+    &-napis-ikonka2 {
+      width: 6vw;
+    }
+  }
+}
+.kontener5 {
+  width: 86%;
+  background-color: #191919;
+  margin-top: -1%;
+  padding: 4% 7% 0% 7%;
+  @include display-flex(space-between, space-between, 0, 0, wrap);
+
+  @include responsive(768) {
+    & {
+      justify-content: space-around;
+    }
+  }
+  @include responsive(425) {
+    & {
+      padding: 4% 0 0 0;
+      width: 100%;
+    }
+  }
+}
+.kontener6 {
+  margin-top: -1%;
+  width: 86%;
+  padding: 5.5% 7% 4.5% 7%;
+  background-color: #191919;
+  @include display-flex(space-between, 0, center, 0, wrap);
+
+  @include responsive(600) {
+    & {
+      flex-direction: row;
+    }
+  }
+}
+
+video {
+  @include dimension;
+}
+video[poster] {
+  width: 100%;
+  background-size: cover;
+}
+.video {
+  position: relative;
+  width: 40%;
+  align-self: center;
+  z-index: 10;
+}
+.play {
+  width: 12.5%;
+  @include responsive(600) {
+    display: none;
+  }
+}
+.video:hover .play {
+  visibility: hidden;
+}
+.blok5 {
+  &-logo {
+    width: 10%;
+
+    & img {
+      @include dimension(auto, 80%);
+
+      @include responsive(768) {
+        & {
+          width: 90%;
+        }
+      }
+    }
+
+    @include responsive(600) {
+      order: -2;
+    }
+  }
+  &-text {
+    @include dimension(30%, auto);
+    color: white;
+    line-height: 145%;
+    font-size: 1.925rem;
+    @include display-flex(0, 0, center);
+  }
+  &-ikonka img {
+    height: 2.75vw;
+  }
+  &-ikonka {
+    flex-shrink: 0.1;
+
+    @include responsive(600) {
+      order: -1;
+    }
+  }
+  @include responsive(1920) {
+    &-ikonka {
+      margin-left: 30%;
+    }
+    &-logo {
+      width: 12%;
+    }
+  }
+  @include responsive(1175) {
+    &-text {
+      font-size: 1.2rem;
+    }
+    &-ikonka {
+      margin-left: 25%;
+    }
+  }
+  @include responsive(875) {
+    &-text {
+      font-size: 1.2rem;
+    }
+    &-ikonka {
+      margin-left: 10%;
+    }
+    &-ikonka img {
+      height: 3vw;
+    }
+    &-logo {
+      width: 15%;
+    }
+  }
+  @include responsive(700) {
+    &-ikonka {
+      margin-left: 0;
+    }
+  }
+  @include responsive(600) {
+    &-text {
+      font-size: 2.35vw;
+      margin: 4% 0 2% 0;
+      width: 100%;
+    }
+    &-logo {
+      align-self: flex-start;
+      width: 22.5%;
+
+      & img {
+        width: 100%;
+      }
+    }
+    &-ikonka {
+      padding: 0;
+      align-self: flex-end;
+    }
+    &-ikonka img {
+      height: 4.5vw;
+    }
+  }
+  @include responsive(425) {
+    &-text {
+      font-size: 2.9vw;
+    }
+    &-logo {
+      width: 25%;
+    }
+    &-ikonka img {
+      height: 6vw;
+    }
+  }
+  @include responsive(390) {
+    &-text {
+      font-size: 3.4vw;
+    }
+    &-logo {
+      width: 27.5%;
+    }
+  }
+}
+#blok5 {
+  width: 40%;
+  color: white;
+}
+.produkty-kontener {
+  @include display-flex(0, 0, 0, column);
+  @include dimension(4vw, 15%);
+  font-size: 1vw;
+  margin-left: 60%;
+  margin-top: 4%;
+}
+.produkty-punkt {
+  z-index: 14;
+  cursor: pointer;
+  padding: 1vw;
+  background-color: white;
+  visibility: hidden;
+  font-weight: 700;
+}
+#dofinansowanie-text {
+  font-size: 1.47rem;
+}
+.blok6 {
+  @include animaction(hidden, 1.5s, hidden, 0);
+  opacity: 0;
+  height: 0px;
+
+  &.active {
+    position: relative;
+    @include dimension(auto, 50%);
+    margin: 4% 0 4%;
+    color: white;
+    @include display-flex(0, 0, 0, column);
+    @include animaction(visible, 1.5s);
+    opacity: 1;
+  }
+  &-obraz1 {
+    @include animaction(hidden, 1.5s, hidden, 0);
+    opacity: 0;
+  }
+  &-obraz1.active {
+    @include animaction(visible, 1.5s);
+    opacity: 1;
+    width: 40%;
+    margin: 4% 0 4%;
+  }
+  &-obraz2 {
+    @include background("./../eksport_grafika_XD/dofinansowanie.png");
+    padding-bottom: 56.64%;
+    position: relative;
+  }
+  &-napis {
+    @include absolut;
+    @include dimension(78%);
+    @include display-flex(center, 0, center, column);
+    text-align: center;
+    color: white;
+  }
+  &-napis2 {
+    font-size: 2.85rem;
+    line-height: 145%;
+    width: 60%;
+  }
+  &-napis3 {
+    margin-top: 3%;
+    font-weight: 700;
+    font-size: 2.9rem;
+  }
+  @include responsive(1920) {
+    &-napis2 {
+      font-size: 1.85rem;
+    }
+    &-napis3 {
+      font-size: 2.6rem;
+    }
+  }
+  @include responsive(1366) {
+    &-napis2 {
+      top: -10%;
+      width: 70%;
+      font-size: 1.65rem;
+    }
+    &-napis3 {
+      font-size: 2.2rem;
+    }
+  }
+  @include responsive(1072) {
+    &-napis2 {
+      width: 75%;
+      font-size: 1.35rem;
+    }
+    &-napis3 {
+      font-size: 2rem;
+    }
+  }
+  @include responsive(768) {
+    &-napis2 {
+      width: 80%;
+      font-size: 2rem;
+    }
+    &-napis3 {
+      font-size: 2.5rem;
+    }
+    &.active {
+      order: 4;
+      width: 80%;
+    }
+    &-obraz1.active {
+      width: 80%;
+      margin-top: 7.5%;
+    }
+  }
+  @include responsive(600) {
+    &-napis2 {
+      line-height: 120%;
+      font-size: 1.5rem;
+    }
+    &-napis3 {
+      font-size: 1.75rem;
+    }
+    &.active {
+      margin: 6% 0 8%;
+    }
+    &-obraz1.active {
+      margin: 8% 0 0;
+    }
+  }
+  @include responsive(425) {
+    &.active {
+      width: 86%;
+      margin: 4% 7% 4% 7%;
+    }
+    &-obraz1.active {
+      width: 100%;
+    }
+  }
+  @include responsive(390) {
+    &-napis2 {
+      font-size: 1.2rem;
+    }
+    &-napis3 {
+      margin-top: 1.5%;
+      font-size: 1.45rem;
+    }
+  }
+  @include responsive(390) {
+    &.active,
+    &-obraz1.active {
+      width: 100%;
+    }
+    &-napis2 {
+      font-size: 1.2rem;
+    }
+    &-napis3 {
+      margin-top: 1.5%;
+      font-size: 1.45rem;
+    }
+  }
+}
+.wieksza-grubosc {
+  font-size: 3.5rem;
+}
+@include responsive(1615) {
+  .wieksza-grubosc {
+    font-size: 3rem;
+  }
+}
+.linia {
+  order: 15;
+  @include dimension(1px);
+  background-color: white;
+}
+@include responsive(1072) {
+  .wieksza-grubosc {
+    font-size: 2.3rem;
+  }
+}
+@include responsive(768) {
+  .wieksza-grubosc {
+    font-size: 3.2vw;
+  }
+  #lista,
+  #lista2 {
+    width: 4vw;
+  }
+}
+@include responsive(600) {
+  .video {
+    margin-top: 1.5vw;
+    width: 80%;
+  }
+  #blok5 {
+    margin-top: 5%;
+    width: 80%;
+  }
+  .wieksza-grubosc {
+    font-size: 3.8vw;
+  }
+  .wieksza-grubosc2 {
+    font-size: 2.4vw;
+    margin-bottom: 2vw;
+  }
+  .blok3-obraz-2 {
+    order: 1;
+    margin-top: 8%;
+  }
+  #lista,
+  #lista2 {
+    width: 4.5vw;
+  }
+  #lista2 {
+    order: -1;
+    align-self: flex-end;
+  }
+}
+@include responsive(425) {
+  .wieksza-grubosc {
+    font-size: 4vw;
+  }
+  .wieksza-grubosc2 {
+    font-size: 2.8vw;
+  }
+  .video,
+  #blok5 {
+    width: 100%;
+  }
+  #lista,
+  #lista2 {
+    width: 6vw;
+  }
+}
+@include responsive(390) {
+  .wieksza-grubosc {
+    font-size: 4.5vw;
+  }
+  .wieksza-grubosc2 {
+    font-size: 3.35vw;
+  }
+}

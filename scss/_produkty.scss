@@ -1,0 +1,408 @@
+@import "mixins.scss";
+
+.pro {
+  &__display {
+    @include responsive(600) {
+      & {
+        display: none;
+      }
+    }
+    &--2 {
+      display: none;
+      @include responsive(600) {
+        & {
+          display: block;
+        }
+      }
+    }
+  }
+  &__blok {
+    @include responsive(600) {
+      & {
+        margin-top: 4%;
+      }
+    }
+    &--padding {
+      @include responsive(600) {
+        padding-top: 4%;
+      }
+      @include responsive(425) {
+        padding-top: 0;
+      }
+    }
+    &--padding2 {
+      @include responsive(600) {
+        padding-bottom: 4%;
+      }
+      @include responsive(425) {
+        padding-bottom: 0;
+      }
+    }
+    &--padding3 {
+      padding-top: 4%;
+      @include responsive(600) {
+        padding: 0;
+      }
+      @include responsive(425) {
+        padding-top: 0;
+      }
+    }
+  }
+  &__blok4 {
+    width: 100%;
+
+    &--obraz {
+      -webkit-box-shadow: 0px 0px 1em 0px rgba(0, 0, 0, 0.24);
+      -moz-box-shadow: 0px 0px 1em 0px rgba(0, 0, 0, 0.24);
+      box-shadow: 0px 0px 1em 0px rgba(0, 0, 0, 0.24);
+      margin: 1em;
+      padding-bottom: 69.87%;
+      @include background();
+      @include responsive(600) {
+        -webkit-box-shadow: 0px 0px 0.5em 0px rgba(0, 0, 0, 0.24);
+        -moz-box-shadow: 0px 0px 0.5em 0px rgba(0, 0, 0, 0.24);
+        box-shadow: 0px 0px 0.5em 0px rgba(0, 0, 0, 0.24);
+        margin: 0.5em;
+      }
+    }
+  }
+
+  &__kontener--slider {
+    margin: 5% calc(7% - 1em) 5% calc(7% - 1em);
+    width: calc(86% + 2em);
+
+    @include responsive(600) {
+      margin: 5% calc(7% - 0.5em) 5% calc(7% - 0.5em);
+      width: calc(86% + 1em);
+    }
+
+    & .pro__blok2 {
+      width: 90%;
+      padding-bottom: 2vw;
+    }
+    & .owl-theme .owl-dots .owl-dot span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+      margin-top: 70%;
+      background: white;
+      border: 2px solid black;
+
+      @include responsive(600) {
+        margin-top: 20%;
+      }
+    }
+    & .owl-theme .owl-dots .owl-dot.active span {
+      background: black;
+    }
+  }
+  &__kontener2 {
+    height: auto;
+    @include background("./../eksport_grafika_XD/textura.jpg", top);
+    margin: 0;
+    padding: 4% 7% 4% 7%;
+    @include responsive(600) {
+      & {
+        padding: 3.5% 7% 3.5% 7%;
+      }
+    }
+    @include responsive(425) {
+      & {
+        padding: 0;
+      }
+    }
+  }
+  &__konteenr2--obraz2 {
+    @include absolut;
+    @include display-flex(center, space-around);
+    @include dimension();
+
+    & img {
+      margin-top: 10%;
+      width: 70%;
+
+      @include responsive(425) {
+        margin: 0;
+      }
+    }
+  }
+  &__slider {
+    @include display-flex(center);
+  }
+  &__duzy--obraz {
+    height: auto;
+    width: 81%;
+    margin: 5% 7% 5% 12%;
+
+    @include responsive(600) {
+      & {
+        margin: 4% 7% 4% 7%;
+        width: 86%;
+      }
+    }
+    @include responsive(425) {
+      & {
+        margin: 0;
+        padding: 4% 7% 4% 7%;
+        background-color: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  &__blok2 {
+    height: 20vw;
+    width: 22.5%;
+    margin-bottom: 1vw;
+
+    &--obraz {
+      height: 70%;
+      @include display-flex(center, 0, center);
+    }
+    &--napis {
+      text-align: center;
+      font-weight: 500;
+      margin: 0.5vw;
+    }
+    &--napis2 {
+      line-height: 135%;
+    }
+
+    & img {
+      @include dimension(68%, 68%);
+    }
+
+    @include responsive(600) {
+      & {
+        width: 38%;
+        margin: 1% 1% 5% 1%;
+        height: 45vw;
+      }
+    }
+    @include responsive(425) {
+      & {
+        width: 48%;
+        height: 45vw;
+      }
+    }
+  }
+
+  &__kontener {
+    @include responsive(768) {
+      justify-content: space-between;
+    }
+    @include responsive(600) {
+      justify-content: center;
+      margin: 0 7% 0 7%;
+    }
+  }
+  &__konteenr2--obraz {
+    @include responsive(600) {
+      margin-bottom: 6%;
+    }
+    @include responsive(425) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__blok3 {
+    width: 31%;
+    cursor: default;
+    @include responsive(768) {
+      & {
+        width: 32%;
+        margin: 0;
+      }
+      & p {
+        font-size: 2.05vw;
+      }
+    }
+    @include responsive(600) {
+      & {
+        width: 80%;
+        margin-top: 1vw;
+      }
+      & p {
+        font-size: 3.5vw;
+      }
+    }
+    @include responsive(425) {
+      & {
+        width: 100%;
+        margin-top: 1vw;
+      }
+      & p {
+        font-size: 4.75vw;
+      }
+    }
+
+    &--margin {
+      margin-right: 5%;
+      @include responsive(768) {
+        margin: 0;
+      }
+      @include responsive(600) {
+        & br {
+          display: none;
+        }
+      }
+    }
+
+    &--kontener {
+      margin: 4% 7% 0 7%;
+      @include responsive(768) {
+        justify-content: space-between;
+      }
+      @include responsive(600) {
+        margin-top: 0;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.pro2 {
+  &__kontener3 {
+    background-color: rgba(0, 0, 0, 0.05);
+    height: auto;
+    padding: 4% 7% 4% 7%;
+    margin: 0;
+    @include responsive(425) {
+      padding: 0;
+    }
+    &--padding {
+      padding-top: 0;
+      @include responsive(600) {
+        padding-top: 4%;
+      }
+      @include responsive(425) {
+        padding-top: 0;
+      }
+    }
+  }
+  &__kontener35 {
+    justify-content: flex-end;
+    @include responsive(600) {
+      order: 2;
+    }
+  }
+  &__margin {
+    margin-top: -12.5%;
+    @include responsive(600) {
+      margin: 0 0 6%;
+    }
+    @include responsive(425) {
+      margin: 0;
+    }
+  }
+}
+
+.pro3 {
+  &__kontener2 {
+    & img {
+      height: 75%;
+      height: 75%;
+    }
+  }
+  &__kontener3 {
+    background-color: rgba(0, 0, 0, 0.05);
+    height: auto;
+    padding: 5% 7% 13% 7%;
+    margin: 7.5% 0 14% 0;
+    @include responsive(600) {
+      & {
+        padding: 5% 7% 6% 7%;
+        margin: 0;
+      }
+      &--blok {
+        margin-bottom: 8%;
+      }
+    }
+    @include responsive(425) {
+      & {
+        padding: 0;
+      }
+    }
+  }
+  &__kontener35 {
+    @include responsive(600) {
+      order: 2;
+    }
+  }
+  &__margin {
+    margin-bottom: -62.5%;
+    @include responsive(600) {
+      margin: 0;
+    }
+  }
+}
+
+.owl-theme .owl-nav {
+  @include absolut(8%, -5.75%);
+  @include display-flex(space-between, space-between, 0, column);
+
+  @include responsive(1024) {
+    & {
+      top: 5%;
+    }
+  }
+  @include responsive(600) {
+    & {
+      display: none;
+    }
+  }
+}
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  width: 3.75vw;
+  height: 3.75vw;
+  position: relative;
+  @include responsive(600) {
+    & {
+      @include absolut(-35vw, 7%);
+      width: 15%;
+      height: 32vw;
+      opacity: 0;
+      border-radius: 0;
+      margin: 0;
+      background-color: rebeccapurple;
+    }
+  }
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+  @include responsive(600) {
+    left: 90%;
+  }
+}
+.owl-carousel .owl-nav button.owl-next span,
+.owl-carousel .owl-nav button.owl-prev span {
+  @include absolut(-7%, 9%);
+  height: 80%;
+  width: 80%;
+  font-size: 3vw;
+
+  @include responsive(600) {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+}
+.owl-theme .owl-nav .disabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.owl-carousel3 .owl-nav {
+  height: 90%;
+  @include display-flex(center, center);
+  @include absolut(0, -5.75%);
+  @include responsive(600) {
+    & {
+      display: block;
+      position: relative;
+      width: 100%;
+      height: 72%;
+      padding: 0;
+    }
+  }
+}

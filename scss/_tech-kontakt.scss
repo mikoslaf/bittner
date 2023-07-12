@@ -1,0 +1,305 @@
+@import "mixins.scss";
+
+.tech {
+  &__kontener35 {
+    flex-direction: column-reverse;
+  }
+  &__blok3 {
+    margin-top: 8%;
+    @include responsive(600) {
+      & {
+        margin: 0;
+      }
+    }
+  }
+  &__video {
+    @include responsive(600) {
+      margin: 0 0 6%;
+    }
+  }
+}
+.kon {
+  &--margin {
+    @include responsive(600) {
+      & {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__kontener--obraz {
+    top: 38%;
+    height: 28%;
+    @include responsive(600) {
+      top: 30%;
+    }
+    @include responsive(425) {
+      top: 21%;
+      height: 55%;
+    }
+  }
+  &__kontakt {
+    padding-left: 25%;
+    width: 75%;
+    @include responsive(600) {
+      & {
+        padding-left: 16%;
+        width: 84%;
+      }
+    }
+    @include responsive(425) {
+      & {
+        width: 93%;
+        padding-left: 7%;
+      }
+    }
+  }
+  &__kontener5 {
+    padding: 5% 7% 5% 7%;
+    background-color: white;
+    color: black;
+    @include responsive(600) {
+      & {
+        padding: 0;
+        width: 100%;
+      }
+    }
+  }
+  &__stopka {
+    color: #191919;
+    @include responsive(600) {
+      & {
+        display: none;
+      }
+    }
+  }
+  &__br {
+    display: none;
+    @include responsive(905) {
+      display: block;
+    }
+  }
+  &__blok {
+    @include responsive(600) {
+      padding: 5vw 0 5vw;
+      width: 100%;
+    }
+    &--obraz {
+      width: 40%;
+      margin: 0;
+      @include responsive(600) {
+        & {
+          width: 100%;
+          margin-bottom: 6%;
+        }
+      }
+    }
+  }
+  &__blok2 {
+    height: 100%;
+    @include responsive(600) {
+      margin-top: 8%;
+    }
+  }
+
+  &--tytul {
+    margin-left: 7%;
+    @include responsive(600) {
+      & {
+        margin-left: 16%;
+      }
+    }
+    @include responsive(425) {
+      & {
+        margin-left: 7%;
+      }
+    }
+  }
+
+  &__kontener2 {
+    height: auto;
+    margin: 6% 7% 6% 7%;
+  }
+
+  &__kontener {
+    @include display-flex(space-around, space-between, 0, 0, wrap);
+    margin: 2% 7% 2% 7%;
+    width: 86%;
+    @include responsive(600) {
+      & {
+        margin-top: -3vw;
+      }
+    }
+
+    &--blok {
+      width: 33%;
+      @include responsive(600) {
+        & {
+          width: 80%;
+        }
+      }
+      @include responsive(425) {
+        & {
+          width: 100%;
+        }
+      }
+    }
+
+    &--text {
+      font-weight: 700;
+    }
+    &--text2 {
+      font-weight: 400;
+      font-size: 2rem;
+      @include responsive(1440) {
+        & {
+          font-size: 1.8rem;
+        }
+      }
+      @include responsive(1024) {
+        & {
+          font-size: 1.5rem;
+        }
+      }
+      @include responsive(600) {
+        & {
+          margin-top: 2.5%;
+        }
+      }
+      @include responsive(425) {
+        & {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+form {
+  @include display-flex(space-between, space-between, 0, 0, wrap);
+  width: 100%;
+  height: 100%;
+
+  & input[type="checkbox"] {
+    position: relative;
+    cursor: pointer;
+    margin-right: 1vw;
+    @include responsive(600) {
+      & {
+        margin-right: 3vw;
+      }
+    }
+  }
+  & input[type="checkbox"]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    top: 0;
+    left: 0;
+    border: 1px solid #555555;
+    background-color: white;
+    @include responsive(1440) {
+      & {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  & input[type="checkbox"]:checked:after {
+    content: "";
+    display: block;
+    width: 84%;
+    height: 70%;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 10%;
+    left: 26%;
+    @include responsive(1440) {
+      & {
+        width: 44%;
+        left: 34%;
+      }
+    }
+  }
+}
+#text {
+  margin-bottom: 2vw;
+}
+.form {
+  &:focus {
+    outline: none;
+  }
+  padding-bottom: 0.5vw;
+  margin-top: 2.9vw;
+  width: 45%;
+  border: 0;
+  border-bottom: 1px solid gray;
+
+  @include responsive(600) {
+    padding-bottom: 1.5vw;
+    margin-top: 6.5vw;
+    width: 100%;
+  }
+
+  &__button {
+    @include dimension(2vw, 8.5vw);
+    @include responsive(1920) {
+      & {
+        @include dimension(2.2vw, 9.5vw);
+      }
+    }
+    @include responsive(1568) {
+      & {
+        @include dimension(2.5vw, 10.5vw);
+      }
+    }
+    @include responsive(1200) {
+      & {
+        @include dimension(2.75vw, 11vw);
+      }
+    }
+    @include responsive(1073) {
+      & {
+        width: 15vw;
+      }
+    }
+    @include responsive(600) {
+      & {
+        @include dimension(4.75vw, 26vw);
+        //font-size: 2.7vw;
+      }
+    }
+    @include responsive(425) {
+      & {
+        @include dimension(8vw, 39vw);
+        // font-size: 3.5vw;
+      }
+    }
+  }
+
+  &__p {
+    font-weight: 400;
+    font-size: 1.4rem;
+    @include display-flex();
+    @include responsive(1440) {
+      & {
+        font-size: 1.2rem;
+      }
+    }
+    @include responsive(1024) {
+      & {
+        font-size: 1rem;
+      }
+    }
+    @include responsive(425) {
+      & {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
