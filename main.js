@@ -1,5 +1,3 @@
-var $ = jQuery;
-
 $(window).on("load", function () {
   const x = document.querySelector(".menu");
   var ilosc = 4;
