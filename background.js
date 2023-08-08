@@ -15,7 +15,7 @@ function background_index(id, id_height = "#blok3-obraz1-tu", id_padding = id)
 {
   if($(id).length > 0)
   {
-    if($(".menu").width() > 515)
+    if($("body").width() > 600)
     {
       const paddingTop = parseFloat($(id_padding).css("padding-top")) * 2;
       const NewSize = $(id_height).height() + paddingTop;

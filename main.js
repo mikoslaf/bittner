@@ -1,8 +1,7 @@
-$(window).on("load", function () {
-  const x = document.querySelector(".menu");
-  var ilosc = 4;
-  var ilosc2 = 3;
-  if (x.offsetWidth < 600) {
+$(function() {
+  let ilosc = 4;
+  let ilosc2 = 3;
+  if ($("body").width() < 600) {
     ilosc = 2;
     ilosc2 = 2;
   }
@@ -31,77 +30,70 @@ $(window).on("load", function () {
 
   przesterzn_menu();
   przestan();
-  const wid = document.querySelector(".menu");
-  if (wid.offsetWidth < 426) {
+  if ($("body").width() < 426) {
     svg("menu-logo", "./eksport_grafika_XD/logo-5.svg");
     svg("mat-obraz", "./eksport_grafika_XD/pro08-5.svg");
   }
 });
 
-$(document).ready(function () {
+let lista = false;
+let menu_przestrzen = 0;
+let pro = false;
+let menu = true;
+let przycisk = true;
+
+
+$(function() {
   $(".video").on("click", function () {
     $(".play").toggleClass("active");
   });
-});
 
-$(document).ready(function () {
   $("#lista").on("click", function () {
     $(".blok6-obraz1").toggleClass("active");
     $(".blok6").toggleClass("active");
     $(".blok4-napis").toggleClass("active");
   });
-});
 
-$(document).ready(function () {
   $("#lista2").on("click", function () {
     $(".blok6-obraz1").toggleClass("active");
     $(".blok6").toggleClass("active");
     $(".blok4-napis").toggleClass("active");
   });
-});
 
-var lista = false;
-var menu_przestrzen = 0;
-var pro = false;
-
-$(document).ready(function () {
   $(".menu-produkty").on("click", function () {
-    const wartosc = document.getElementById("menu");
-    if (wartosc.offsetWidth > 1024) {
+    if ($("body").width() > 1024) 
+    {
       $(".menu-produkty2").toggleClass("active");
-      document.getElementById("menu-produkty").style.paddingTop =
-        wartosc.offsetHeight * 0.6 + "px";
-    } else {
+      const NewSize = $(".menu").outerHeight() * 0.6;
+      $("#menu-produkty").css("padding-top",  NewSize + "px");
+    } 
+    else 
+    {
       $(".menu-mini-lista").toggleClass("active");
-      const wartosc2 = document.querySelector(".tabela-menu-ul");
-      var margin = window.getComputedStyle(wartosc2);
+    
+      const wartosc = $(".tabela-menu-ul");
       if (pro == false) {
-        wartosc.style.overflow = "scroll";
-        wartosc.style.paddingBottom = "0px";
+        wartosc.css("overflow", "scroll");
+        wartosc.css("padding-bottom", "0px");
         pro = true;
       } else {
-        wartosc.style.overflow = "hidden";
-        wartosc.style.paddingBottom = "";
+        wartosc.css("overflow", "hidden");
+        wartosc.css("padding-bottom", "");
         pro = false;
       }
       lista = true;
-      console.log(wartosc.style.overflow);
+
+      const NewSize = Math.ceil(wartosc.outerHeight()) +  parseFloat(wartosc.css("margin-top"));
+
       if (
-        document.getElementById("menu-lista").style.height !=
-          wartosc2.offsetHeight + parseFloat(margin["marginTop"]) + "px" &&
-        document.querySelector("body").offsetWidth > 425
+        $("#menu-lista").height() != NewSize &&
+          $("body").width() > 425
       ) {
-        document.getElementById("menu-lista").style.height =
-          wartosc2.offsetHeight + parseFloat(margin["marginTop"]) + "px";
+        $("#menu-lista").css("height", NewSize + "px");
       }
     }
   });
-});
-
-var menu = true;
-var przycisk = true;
-
-$(document).ready(function () {
+  
   $("#hamburger").on("click", function () {
     document.getElementById("produkty").href = "#";
     const m = document.getElementById("menu-lista");
