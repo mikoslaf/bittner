@@ -95,15 +95,14 @@ $(function() {
   });
   
   $("#hamburger").on("click", function () {
-    document.getElementById("produkty").href = "#";
-    const m = document.getElementById("menu-lista");
-    m.style.transition = "all 1.5s ease";
+    $("#produkty").prop("href","#");
+    const Obj_menu = $("#menu-lista");
+    Obj_menu.css("transition", "all 1.5s ease");
     $(".menu-lista").toggleClass("active");
     $(".menu-logo").toggleClass("active");
     if (pro == true) {
-      const wartosc = document.getElementById("menu");
-      wartosc.style.overflow = "hidden";
-      wartosc.style.paddingBottom = "";
+      $("#menu").css("overflow", "hidden");
+      $("#menu").css("addingBottom", "");
       pro = false;
     }
     if (przycisk == true) {
@@ -115,13 +114,13 @@ $(function() {
     }
     if (menu == false) {
       menu = true;
-      m.style.height = "";
+      Obj_menu.css("height","");
     } else {
       menu = false;
-      m.style.height = menu_przestrzen + "px";
+      Obj_menu.css("height", menu_przestrzen + "px");
     }
     if (lista == true) {
-      m.style.height = "";
+      Obj_menu.css("height","");
       lista = false;
       setTimeout(function () {
         $(".menu-mini-lista").removeClass("active");
@@ -135,64 +134,40 @@ $(window).resize(function () {
   przestan();
 });
 
-$(document).ready(function () {
-  $("#check1").on("click", function () {
-    checkbox("box1");
-  });
-  $("#check2").on("click", function () {
-    checkbox("box2");
-  });
-});
-
-function checkbox(localization) {
-  if (document.getElementById(localization).checked != true) {
-    document.getElementById(localization).checked = true;
-  } else {
-    document.getElementById(localization).checked = false;
-  }
-}
-
 function svg(id, url) {
-  if (document.getElementById(id) != null) {
-    document.getElementById(id).src = url;
+  if ($('#' + id).length) {
+    $('#' + id).attr('src', url);
   }
 }
 
 function przestan() {
   if (menu == true) {
-    const xz = document.getElementById("menu");
-    if (xz.offsetWidth < 1025) {
-      var x = document.getElementById("hamburger");
-    } else {
-      var x = document.getElementById("menu-logo");
-    }
-    const s = window.getComputedStyle(document.getElementById("menu"));
-    const number = parseInt(x.offsetHeight) + parseInt(s.paddingTop) * 2;
-    console.log(number + " " + parseInt(x.offsetHeight) + " " + s.paddingTop);
-    document.getElementById("przesrzen").style.height = number + "px";
+    let height; 
+    if ($("body").width() < 1025) 
+      height = $("#hamburger").outerHeight();
+    else 
+      height = $("#menu-logo").outerHeight();
+    
+    const NewSize = height + parseInt($("#menu").css("padding-top")) * 2;
+    $("#przesrzen").css("height", NewSize + "px");
   }
 }
 
 function przesterzn_menu() {
-  const x = document.getElementById("menu");
-  if (x.offsetWidth < 1026) {
+  const width = $("body").width();
+  if (width < 1026) {
     if (menu == true) {
-      if (x.offsetWidth < 426) {
-        menu_przestrzen =
-          window.innerHeight ||
-          document.documentElement.clientHeight ||
-          document.body.clientHeight;
+      if (width < 426) {
+        menu_przestrzen = $("body").height();
         $(".menu-lista").removeClass("active");
       } else {
-        const y = document.getElementsByClassName("tabela-menu-ul")[0];
-        const number =
-          parseInt(y.offsetHeight) +
-          parseInt(parseFloat(window.getComputedStyle(y)["marginTop"]));
-        menu_przestrzen = number;
+        const NewSize = ($(".tabela-menu-ul").outerHeight() +
+          parseInt($(".tabela-menu-ul").css("margin-top")));
+        menu_przestrzen = NewSize;
         $(".menu-lista").removeClass("active");
       }
     } else {
-      document.getElementById("menu-lista").style.height = "0px";
+      $("#menu-lista").css("height", "0px")
       $(".menu-przycisk").removeClass("active");
       $(".menu-lista").removeClass("active");
       menu = true;
@@ -201,8 +176,8 @@ function przesterzn_menu() {
       $(".menu-logo").removeClass("active");
       lista = false;
       if (pro == true) {
-        x.style.overflow = "hidden";
-        x.style.paddingBottom = "";
+        $("#menu").css("overflow", "hidden");
+        $("#menu").css("paddingBottom", "");
         pro = false;
       }
     }
