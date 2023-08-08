@@ -6,6 +6,7 @@ $(window).resize(function () {
   tlo();
 });
 
+console.log("tes");
 function tlo() {
   var x = document.querySelector(".menu");
   if (document.getElementById("blok3-tlo") != null) {
