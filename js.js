@@ -1,32 +1,57 @@
-window.onload = function () {
-  tlo();
-};
-
-$(window).resize(function () {
-  tlo();
+$(function() {
+  background_index();
 });
 
-console.log("tes");
-function tlo() {
-  var x = document.querySelector(".menu");
-  if (document.getElementById("blok3-tlo") != null) {
-    if (x.offsetWidth > 600) {
-      const y = document.getElementById("blok3-obraz1-tu");
-      const number =
-        parseInt(y.offsetHeight) +
-        parseInt(
-          parseFloat(
-            window.getComputedStyle(document.getElementById("blok3-tlo"))
-              .paddingTop
-          )
-        ) *
-          2;
-      document.getElementById("blok3-tlo").style.backgroundSize =
-        "100% " + number + "px";
-    } else {
-      var z = document.querySelector("#kontener35-tu");
-      document.getElementById("blok3-tlo").style.backgroundSize =
-        "100% " + z.offsetHeight + "px";
+$(window).resize(function () {
+  background_index()
+});
+
+
+function background_index()
+{
+  if($("#blok3-tlo").length > 0)
+  {
+    if($(".menu").width() > 515)
+    {
+      const paddingTop = parseFloat($("#blok3-tlo").css("padding-top")) * 2;
+      const NewSize = $("#blok3-obraz1-tu").height() + paddingTop;
+      $("#blok3-tlo").css("backgroundSize", "100% " + NewSize + "px");
+    }
+    else 
+    {
+      background_smartphone();
     }
   }
 }
+
+function background_smartphone()
+{
+  $("#blok3-tlo").css("backgroundSize", "100% " + $("#kontener35-tu").height() + "px");
+}
+
+
+// function background_onas()
+// {
+//   if($(".menu").width() > 515)
+//   {
+//     const paddingTop = parseInt($("#blok3-tlo").css("padding-top"));
+//     const marginBottom = parseInt($("#blok3-obraz1-tu").css("margin-bottom"));
+//     const height = parseInt($("#blok3-obraz1-tu").height()) * 1.1;
+//     const height2 = parseInt($("#obraz-tu").height());
+
+//     const NewSize_1 = paddingTop + marginBottom + height;
+//     const NewSize_2 = marginBottom + height2;
+//     if(NewSize_1 > NewSize_2)
+//     {
+//       $("#blok3-tlo").css("backgroundSize", "100% " + NewSize_1 + "px");
+//     }
+//     else 
+//     {
+//       $("#blok3-tlo").css("backgroundSize", "100% " + NewSize_2 * 1.02 + "px");
+//     }
+//   }
+//   else 
+//   {
+//     background_smartphone();
+//   }
+// }
