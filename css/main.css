@@ -43,6 +43,16 @@ img {
   width: 100%;
 }
 
+.fade {
+  opacity: 0;
+  transition: all 1000ms;
+}
+
+.fade-out {
+  opacity: 1.0;
+  transition: all 1000ms;
+}
+
 .menu {
   position: fixed;
   top: 0%;

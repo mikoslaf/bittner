@@ -1,6 +1,24 @@
+let ilosc = 4;
+let ilosc2 = 3;
+const lazyload = target =>
+{
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting)
+      {
+        $(entry.target).addClass("fade-out");
+        observer.disconnect();
+      }
+    });
+  });
+  io.observe(target);
+}
+
 $(function() {
-  let ilosc = 4;
-  let ilosc2 = 3;
+  
+  const targets = document.querySelectorAll(".fade");
+  targets.forEach(lazyload);
+
   if ($("body").width() < 600) {
     ilosc = 2;
     ilosc2 = 2;
@@ -42,8 +60,8 @@ let pro = false;
 let menu = true;
 let przycisk = true;
 
-
 $(function() {
+
   $(".video").on("click", function () {
     $(".play").toggleClass("active");
   });
